@@ -1,0 +1,8 @@
+# Search all files
+-a
+--type-set=haml=.haml
+--type-set=scss=.scss
+--type-set=log=.log
+--ignore-dir=log/
+--ignore-dir=node_modules/
+--ignore-dir=vendor/
