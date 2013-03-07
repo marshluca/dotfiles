@@ -54,7 +54,6 @@ set smartcase " Ignore case when searching lowercase
 " Colors **********************************************************************
 set background=dark
 syntax on
-colorscheme vividchalk
 
 " Status Line *****************************************************************
 set showcmd
