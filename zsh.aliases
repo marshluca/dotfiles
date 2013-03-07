@@ -107,3 +107,6 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+# fuck GFW
+alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@69.164.212.248'

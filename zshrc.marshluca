@@ -52,16 +52,4 @@ export TERM=xterm-color
 export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
 
-alias ssh-eoeshare='ssh eoeshare@118.26.224.40'
-alias ssh-mysql='ssh root@118.26.224.43'
-alias ssh-iceskysl='ssh iceskysl@69.164.212.248'
-alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@69.164.212.248'
-alias ssh-mongodb='ssh root@192.168.0.243'
-alias upload-resources="
-  cd ~/QQ;
-  scp *wallpaper.rar eoeshare@eoeshare40:~/; mv *wallpaper.rar ~/.Trash;
-  scp *ringtone.rar eoeshare@eoeshare40:~/; mv *ringtone.rar ~/.Trash;
-  ssh eoeshare@eoeshare40 'sh /var/www/share/admin/current/resource_import.sh'
-"
-
 [[ -f ~/.cundle/cundle.sh ]] && . ~/.cundle/cundle.sh
