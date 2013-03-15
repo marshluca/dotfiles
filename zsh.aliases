@@ -109,4 +109,4 @@ alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # fuck GFW
-alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@69.164.212.248'
+alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@106.187.96.81'
