@@ -1,0 +1,1 @@
+alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@106.187.96.81'
