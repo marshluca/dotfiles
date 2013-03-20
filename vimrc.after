@@ -3,6 +3,7 @@
 "    Theme
 "
 """"""""""""""""""""""""""""""""""""""""""
+set gfn=Menlo:h13
 set background=dark
 colorscheme railscasts
 syntax on
