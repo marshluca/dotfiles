@@ -1,1 +1,5 @@
 call janus#disable_plugin('nerdcommenter')
+
+if filereadable(expand("~/.vimrc.vundle"))
+  source ~/.vimrc.vundle
+endif
