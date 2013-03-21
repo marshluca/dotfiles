@@ -8,24 +8,19 @@
  " My Bundles here:
  "
  " original repos on github
- Bundle 'tpope/vim-fugitive'
- Bundle 'Lokaltog/vim-easymotion'
- Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- Bundle 'tpope/vim-rails.git'
+ " Bundle 'tpope/vim-fugitive'
+ " Bundle 'Lokaltog/vim-easymotion'
+ " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+ " Bundle 'tpope/vim-rails.git'
  " vim-scripts repos
- Bundle 'L9'
- Bundle 'FuzzyFinder'
+ " Bundle 'L9'
+ " Bundle 'FuzzyFinder'
  " non github repos
- Bundle 'git://git.wincent.com/command-t.git'
- " ...
- Bundle 'RubySinatra'
- Bundle 'Ruby-Snippets'
- Bundle 'ruby.vim'
- Bundle 'ruby-macros.vim'
+ " Bundle 'git://git.wincent.com/command-t.git'
+ " Bundle 'rails.vim'
 
- Bundle 'railstab.vim'
- Bundle 'railscasts'
- Bundle 'rails.vim'
+ Bundle 'tComment'
+
  "
  " Brief help
  " :BundleList          - list configured bundles
