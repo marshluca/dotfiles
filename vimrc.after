@@ -3,7 +3,6 @@
 "    Theme
 "
 """"""""""""""""""""""""""""""""""""""""""
-set gfn=Menlo:h13
 set background=dark
 colorscheme railscasts
 syntax on
@@ -19,6 +18,9 @@ syntax on
 :noremap <C-H> <C-W>h
 :noremap <C-L> <C-W>l
 
+map <C-c> "+y
+map <C-v> "+p
+map <C-x> "+x
 
 """"""""""""""""""""""""""""""""""""""""
 "
