@@ -43,3 +43,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add Node modules to PATH
 
 if [ -s ~/.zshrc.aliases ] ; then source ~/.zshrc.aliases ; fi
+if [ -s ~/.zshrc.completion ] ; then source ~/.zshrc.completion ; fi
