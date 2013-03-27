@@ -3,6 +3,7 @@
 "    Theme
 "
 """"""""""""""""""""""""""""""""""""""""""
+set wrap
 set background=dark
 colorscheme railscasts
 syntax on
