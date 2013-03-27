@@ -110,3 +110,49 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # fuck GFW
 alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@106.187.96.81'
+
+# Useful shell scripts
+# 1. find and replace
+# grep -r -l from . | xargs -0 -n 1 sed -i -e 's/from/to/g'
+# ack -l --print0 --text from | xargs -0 -n 1 sed -i -e 's/from/to/g'
+# ack -l --print0 "/_asset/" | xargs -0 -n 1 sed -i -e 's/_asset/_assets/g'
+# find . -type f -print0 | xargs -0 -n 1 sed -i -e 's/from/to/g'
+# find . ! -regex ".*[/]\.svn[/]?.*" -type f -print0 | xargs -0 -n 1 sed -i -e 's/from/to/g'
+
+# 2. find and remove
+# 1)To remove multiple files such as *.jpg or *.sh with one command find
+# find . -name "FILE-TO-FIND" -exec rm -rf {} \;
+# find . -type f -name "FILE-TO-FIND" -exec rm -f {} \;
+# 2)Find all files having .bak (*.bak) extension in current directory and remove them:
+# find . -type f -name "*.bak" -exec rm -f {} \;
+# 3)Find all core files and remove them:
+# find / -name core -exec rm -f {} \;
+# 4)Find all *.bak files in current directory and removes them with confirmation:
+# find . -type f -name "*.bak" -exec rm -i {} \;
+
+# 3. find and rename
+# for i in `ls`; do mv -f $i `echo $i | sed 's/^...../zhaozh/'`; done
+# for i in `ls`; do mv -f $i `echo $i | sed 's/.....$/snail/'`; done
+# find . -name '*' -type 'f' | xargs -I {} mv {} {}.bak
+# ls | xargs -I {} mv {} {}.bak
+
+# 4. awk, sort, tee
+# awk '{print $1}' wcx.log
+# grep MT  SPMS_20060110.LOG | awk -F - '{print $2}' |awk -F : '{print $1}' | more
+# awk '{if () pint $6}' AUTHMT200412070109.LOG
+# awk '{pint $4}' AUTHMT200412070109.LOG
+# awk '{if ($0~/202/) print  $6}' xxx
+# awk '{if ($0~/\|201\|/) print $0}' AUTHMT200412070109.LOG
+# awk '{if ($0~/\|201\|/) print $0}' AUTHMT20041207*.LOG
+# awk '{if ($0~/\|211\|/) print $0}' AUTHMT20041207*.LOG | tee www
+# awk '{if ($0~/\|211\|/) print $0}' AUTHMT20041207*.LOG | tee www
+# grep -h "|211|" AUTHMT20041207*.LOG | tee wwww
+# sed y/\|211\|/ c\ /\t/ www | tee qqq
+# sed y/\|211\|/  / www | tee qqq
+# sed -e 's/foo/bar/' myfile.txt
+# sed -e 's/\|/ /g' wwww | tee wwwww
+# grep -h "|211|" AUTHMT20041207*.LOG > wwww | sed -e 's/\|/ /g' wwww > wwwww | awk '{print $6}' wwwww > wwwwww | sort -u wwwwww
+# grep -h "|211|" AUTHMT20041207*.LOG > total1
+# sed -e 's/\|/ /g' total1 > total2
+# awk '{print $6}' total2 > total3
+# sort -u total3
