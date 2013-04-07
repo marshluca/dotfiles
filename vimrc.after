@@ -5,6 +5,7 @@
 """"""""""""""""""""""""""""""""""""""""""
 set wrap
 set background=dark
+set guifont=Monaco\ 12
 colorscheme railscasts
 syntax on
 
