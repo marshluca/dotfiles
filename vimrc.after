@@ -5,7 +5,8 @@
 """"""""""""""""""""""""""""""""""""""""""
 set wrap
 set background=dark
-set guifont=Monaco\ 12
+set guifont=Monaco:h12
+" set guifont=Monaco\ 12 " Ubuntu
 colorscheme railscasts
 syntax on
 
@@ -58,3 +59,24 @@ let g:indent_guides_guide_size=1
 " let g:indent_guides_auto_colors = 0
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"    Ctags
+"
+""""""""""""""""""""""""""""""""""""""""""
+au BufWritePost *.rb silent! !ctags -R &
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"   CtrlP
+"
+""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
