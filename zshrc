@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="macovsky"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -38,9 +38,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export EDITOR="/usr/local/bin/mvim -w"
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/X11/bin
 PATH=$PATH:/usr/local/share/npm/bin # Add Node modules to PATH
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+PATH=$PATH:/usr/local/Sencha/Cmd/3.1.2.342 # Sencha Touch CMD
 
-if [ -s ~/.zshrc.aliases ] ; then source ~/.zshrc.aliases ; fi
 if [ -s ~/.zshrc.completion ] ; then source ~/.zshrc.completion ; fi
+if [ -s ~/.zshrc.aliases ] ;    then source ~/.zshrc.aliases ;    fi
+if [ -s ~/.zshrc.local ] ;      then source ~/.zshrc.local ;      fi
