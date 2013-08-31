@@ -1,1 +1,1 @@
-Readline.vi_editing_mode
+# Readline.vi_editing_mode
