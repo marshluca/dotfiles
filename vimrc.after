@@ -1,32 +1,33 @@
 """"""""""""""""""""""""""""""""""""""""
 "
-"    Theme
+"     why I use *,* to do mapping?
 "
-""""""""""""""""""""""""""""""""""""""""""
-set wrap
-set background=dark
-set guifont=Monaco:h12
-" set guifont=Monaco\ 12 " Ubuntu
-colorscheme railscasts
-syntax on
+""""""""""""""""""""""""""""""""""""""""
+" inspired by Derek, the reasons:
+" 1. <LEADER> is too long to type
+" 2. *,* is easier to reach than *\*
+" 3. in practice you nerver type in *,v*, but *, v*
+" Derek also do a nomap for *,*
+"   nnomap <c-e> ,
+" I do not do it, since I do not use *,* as a command a lot
 
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"    Fold
+"    Theme
 "
 """"""""""""""""""""""""""""""""""""""""""
-" set foldmethod=syntax
-" set foldlevelstart=1
-" 
-" let javaScript_fold=1         " JavaScript
-" let ruby_fold=1               " Ruby
-" let sh_fold_enabled=1         " sh
-" let vimsyn_folding='af'       " Vim script
-" let perl_fold=1               " Perl
-" let php_folding=1             " PHP
-" let r_syntax_folding=1        " R
-" let xml_syntax_folding=1      " XML
+set wrap
+set guifont=Monaco:h14
+" set background=dark
+" colorscheme railscasts
+" colorscheme Tango
+" colorscheme desert
+" colorscheme Candy
+" colorscheme Solarized
+colorscheme vividchalk
+syntax on
+
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -37,10 +38,21 @@ syntax on
 :noremap <C-K> <C-W>k
 :noremap <C-H> <C-W>h
 :noremap <C-L> <C-W>l
+" map <C-c> "+y
+" map <C-v> "+p
+" map <C-x> "+x
 
-map <C-c> "+y
-map <C-v> "+p
-map <C-x> "+x
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"    Fold
+"
+""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+" set foldmethod=syntax
+" set foldlevelstart=1
+" let ruby_fold=1               " Ruby
+
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -49,16 +61,30 @@ map <C-x> "+x
 """"""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
 
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "    Vim Indent Guides
 "
 """"""""""""""""""""""""""""""""""""""""""
-map ;; :IndentGuidesToggle<CR>
-let g:indent_guides_guide_size=1
-" let g:indent_guides_auto_colors = 0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+:nmap <silent> <Leader>ie <Plug>IndentGuidesDisable
+map ,ig :IndentGuidesToggle<CR>
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 1
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"   CtrlP
+"
+""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_open_multiple_files = 'v'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(log|jpg|png|jpeg)$',
+  \ }
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -71,12 +97,7 @@ au BufWritePost *.rb silent! !ctags -R &
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"   CtrlP
+"    vim-airline
 "
 """"""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+let g:airline_powerline_fonts = 1
