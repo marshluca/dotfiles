@@ -10,7 +10,7 @@ alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
-alias la="ls -Gla" # List all files colorized in long format, including dot files
+alias lag="ls -Gla" # List all files colorized in long format, including dot files
 alias lsd='ls -l | grep "^d"' # List only directories
 
 # Shortcuts
@@ -33,14 +33,7 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
-alias rst='touch tmp/restart.txt'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -110,6 +103,9 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # fuck GFW
 alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@106.187.96.81'
+
+# open Google Chrome without web security
+alias open-google-chrome='open -a /Applications/Google\ Chrome.app --args --allow-file-access-from-files --disable-web-security'
 
 # Useful shell scripts
 # 1. find and replace
