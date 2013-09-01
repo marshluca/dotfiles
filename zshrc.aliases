@@ -107,6 +107,10 @@ alias ssh-gfw='ssh -qTfnNC -D 7778 iceskysl@106.187.96.81'
 # open Google Chrome without web security
 alias open-google-chrome='open -a /Applications/Google\ Chrome.app --args --allow-file-access-from-files --disable-web-security'
 
+# nginx start and stop scripts, must be run with sudo
+alias nginx-start='sudo launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+alias nginx-stop='sudo launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist'
+
 # Useful shell scripts
 # 1. find and replace
 # grep -r -l from . | xargs -0 -n 1 sed -i -e 's/from/to/g'
