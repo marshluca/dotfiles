@@ -1,19 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""
 "
-"     why I use *,* to do mapping?
-"
-""""""""""""""""""""""""""""""""""""""""
-" inspired by Derek, the reasons:
-" 1. <LEADER> is too long to type
-" 2. *,* is easier to reach than *\*
-" 3. in practice you nerver type in *,v*, but *, v*
-" Derek also do a nomap for *,*
-"   nnomap <c-e> ,
-" I do not do it, since I do not use *,* as a command a lot
-
-
-""""""""""""""""""""""""""""""""""""""""
-"
 "    Theme
 "
 """"""""""""""""""""""""""""""""""""""""""
@@ -21,10 +7,9 @@ set wrap
 set guifont=Monaco:h14
 " set background=dark
 " colorscheme railscasts
-" colorscheme Tango
 " colorscheme desert
-" colorscheme Candy
-" colorscheme Solarized
+" colorscheme solarized
+" colorscheme molokai
 colorscheme vividchalk
 syntax on
 
@@ -48,10 +33,10 @@ syntax on
 "    Fold
 "
 """"""""""""""""""""""""""""""""""""""""""
-set foldmethod=indent
+" set foldmethod=indent
 " set foldmethod=syntax
 " set foldlevelstart=1
-" let ruby_fold=1               " Ruby
+" let ruby_fold=1             " Ruby
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -67,10 +52,10 @@ map <C-n> :NERDTreeToggle<CR>
 "    Vim Indent Guides
 "
 """"""""""""""""""""""""""""""""""""""""""
-:nmap <silent> <Leader>ie <Plug>IndentGuidesDisable
-map ,ig :IndentGuidesToggle<CR>
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 1
+" :nmap <silent> <Leader>ie <Plug>IndentGuidesDisable
+" map ,ig :IndentGuidesToggle<CR>
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_auto_colors = 1
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -100,4 +85,4 @@ au BufWritePost *.rb silent! !ctags -R &
 "    vim-airline
 "
 """"""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
