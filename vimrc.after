@@ -86,3 +86,13 @@ au BufWritePost *.rb silent! !ctags -R &
 "
 """"""""""""""""""""""""""""""""""""""""""
 " let g:airline_powerline_fonts = 1
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"    status line
+"
+""""""""""""""""""""""""""""""""""""""""""
+if janus#is_plugin_enabled('fugitive')
+  set statusline+=%{fugitive#statusline()}
+endif
