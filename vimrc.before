@@ -7,9 +7,9 @@ call janus#disable_plugin('zoomwin')
 call janus#disable_plugin('buffergator')
 call janus#disable_plugin('vroom')
 
-" if filereadable(expand("~/.vimrc.vundle"))
-"   source ~/.vimrc.vundle
-" endif
+if filereadable(expand("~/.vimrc.vundle"))
+  source ~/.vimrc.vundle
+endif
 
 " Certain commands are prefixed with a <Leader> key, which maps to \ by default.
 " You can, for example, use let mapleader = ',' to change this to a comma.
