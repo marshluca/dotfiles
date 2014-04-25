@@ -31,6 +31,8 @@ alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias gpr='git pull --rebase origin master'
+alias grp='git remote prune origin'
 
 # rails
 alias tlog='tail -f log/development.log'
