@@ -1,5 +1,5 @@
 # Search all files
--a
+# -a
 --type-set=haml=.haml
 --type-set=scss=.scss
 --type-set=log=.log
