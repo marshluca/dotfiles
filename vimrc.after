@@ -6,11 +6,7 @@
 set wrap
 set guifont=Monaco:h14
 " set background=dark
-" colorscheme railscasts
-" colorscheme desert
-" colorscheme solarized
-" colorscheme molokai
-colorscheme vividchalk
+colorscheme molokai
 syntax on
 
 
@@ -85,7 +81,7 @@ au BufWritePost *.rb silent! !ctags -R &
 "    vim-airline
 "
 """"""""""""""""""""""""""""""""""""""""""
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 
 """"""""""""""""""""""""""""""""""""""""
