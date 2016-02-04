@@ -40,6 +40,7 @@ alias oh-my-zsh-upgrade='upgrade_oh_my_zsh'
 
 # rails
 alias tlog='tail -f log/development.log'
+alias be='bundle exec'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -114,6 +115,9 @@ alias open-google-chrome='open -a /Applications/Google\ Chrome.app --args --allo
 alias nginx-start='sudo launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx-root.plist'
 alias nginx-stop='sudo launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.nginx-root.plist'
 
+# list homebrew dependencies
+# brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+
 # Useful shell scripts
 # 1. find and replace
 # grep -r -l from . | xargs -0 -n 1 sed -i -e 's/from/to/g'
@@ -159,3 +163,11 @@ alias nginx-stop='sudo launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.
 # sed -e 's/\|/ /g' total1 > total2
 # awk '{print $6}' total2 > total3
 # sort -u total3
+
+
+# Linux tips
+# 1. sort files as file size
+# du -h ~/ --max-depth=1 | sort -hr
+# df -h /
+# Verify the system has free inodes available:
+# df -i /
